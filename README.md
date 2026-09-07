@@ -39,7 +39,6 @@
 - [STOP and Resume Behavior](#stop-and-resume-behavior)
 - [Conditional Pit-Stop Logic](#conditional-pit-stop-logic)
   - [Healthy Battery Scenario](#healthy-battery-scenario)
-  - [Unknown Battery Scenario](#unknown-battery-scenario)
   - [Low Battery Scenario](#low-battery-scenario)
 - [Battery Monitoring](#battery-monitoring)
 - [Hardware](#hardware)
@@ -343,52 +342,6 @@ The battery-monitoring system uses separate low and recovery thresholds to preve
 
 ---
 
-## Unknown Battery Scenario
-
-If the STOP sign is detected but valid battery telemetry is unavailable, the battery condition is treated as **UNKNOWN**.
-
-Battery telemetry is considered stale if a valid battery status has not been received for approximately **2.5 seconds**.
-
-```text
-STOP Sign = Detected
-Battery State = UNKNOWN
-```
-
-The RoboCar enters `WAIT_FOR_BATTERY` and commands **exact zero velocity** while waiting for valid battery information.
-
-```text
-STOP Detected
-      +
-Battery Unknown
-      |
-      v
-WAIT_FOR_BATTERY
-      |
-      v
-Exact Zero Command
-      |
-      v
-Wait for Valid Battery State
-```
-
-Once valid battery information is restored:
-
-```text
-HEALTHY
-   |
-   v
-Resume NORMAL_DRIVE
-
-LOW
-   |
-   v
-Begin PRE_PIT_STOP
-```
-
-This fail-safe prevents the RoboCar from making a pit-stop decision using stale or missing battery information.
-
----
-
 ## Low Battery Scenario
 
 When a confirmed STOP sign is detected and the battery condition is **LOW**, the RoboCar begins the autonomous pit-stop sequence.
@@ -455,6 +408,9 @@ The Team 5 battery-monitor node processes this voltage and publishes:
 ```text
 /battery_percentage
 /battery_low
+
+
+
 ```
 
 ## Battery Parameters
