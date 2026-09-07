@@ -176,12 +176,7 @@ Integrated the major perception, decision, and control systems required for a co
                                   REJOIN
                                     |
                            Autonomous Driving
-                                    |
-                                 /cmd_vel
-                                    |
-                                   VESC
-                                    |
-                          Motor + Steering
+                               
 ```
 
 # YOLO STOP-Sign Detection
@@ -287,33 +282,34 @@ The stop manager acts as the final publisher of vehicle commands and prevents th
 
 The final project extends the STOP-sign behavior by adding battery condition to the decision.
 ```text
-NORMAL_DRIVE
-     |
-     | STOP sign detected
-     v
-BATTERY DECISION
-   /       |        \
-HEALTHY  UNKNOWN     LOW
-   |        |         |
-   |        v         v
-   |  WAIT_FOR_BATTERY
-   |    exact zero
-   |                  |
-   |              PRE_PIT_STOP
-   |                  |
-   |              4 second stop
-   |                  |
-   |               ENTER_PIT
-   |                  |
-   |               PIT_DRIVE
-   |                  |
-   |               PIT_DWELL
-   |                  |
-   |                EXIT_PIT
-   |                  |
-   +--------------> NORMAL_DRIVE
-```
-
+                         OAK-D Lite
+                             |
+                  +----------+----------+
+                  |                     |
+                  v                     v
+           Lane Detection        YOLO STOP Detection
+                  |                     |
+                  v                     |
+           Lane Guidance                |
+                  |                     |
+                  +----------+----------+
+                             |
+                      Pit Stop Manager
+                             |
+                     Battery Condition
+                        /          \
+                   Healthy         Low
+                      |             |
+               Continue Driving   PIT ENTRY
+                                    |
+                                 PIT STOP
+                                    |
+                                 PIT EXIT
+                                    |
+                                  REJOIN
+                                    |
+                           Autonomous Driving
+                             
 ---
 
 ## Healthy Battery Scenario
