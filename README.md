@@ -309,6 +309,8 @@ The final project extends the STOP-sign behavior by adding battery condition to 
                                     |
                            Autonomous Driving
                              
+```
+
 ---
 
 ## Healthy Battery Scenario
@@ -322,7 +324,8 @@ Battery State = HEALTHY
 
 ```text
 STOP Detected
-      +
+      |
+      v
 Battery Healthy
       |
       v
@@ -339,6 +342,8 @@ The battery-monitoring system uses separate low and recovery thresholds to preve
 ### Healthy Battery Demo
 
 ▶️ **[WATCH HEALTHY BATTERY DEMONSTRATION](https://www.youtube.com/watch?v=omp8wu0ba2c)**
+
+---
 
 ---
 
