@@ -240,26 +240,12 @@ Confidence Threshold
 
 The OAK-D Lite provides RGB imagery for the lane-detection system.
 
-The lane-detection node identifies the yellow track markers and calculates the lane position. The lane-guidance node then generates steering and throttle commands.
+The lane-detection node identifies the yellow track markers and calculates the lane position. The lane-guidance node then generates steering and throttle commands. It also uses the outer white line to create an appropriate path for the veihicle to autonomously follow the track smootthly.
+Demonstration of Camera Vision and Path finding :
+<img width="1280" height="800" alt="lanedetection1" src="https://github.com/user-attachments/assets/4c130c2e-927b-4519-8821-513009fe892d" />
+<img width="1280" height="800" alt="lanedetection2" src="https://github.com/user-attachments/assets/7f1d634d-494b-44fe-9974-d0ae02aaef9b" />
 
-```text
-/camera/color/image_0
-          |
-          v
- lane_detection_node
-          |
-      /centroid
-          |
-          v
- lane_guidance_node
-          |
-    /lane_cmd_vel
-          |
-          v
-   Pit Stop Manager
-          |
-          v
-       /cmd_vel
+
 ```
 
 #  STOP and Resume Behavior
