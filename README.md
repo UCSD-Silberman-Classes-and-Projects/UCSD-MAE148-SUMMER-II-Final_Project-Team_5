@@ -77,7 +77,7 @@ The project combines:
  
  **Nicholas Campos**  [ECE] 
  
- **Qihao Huang**  [ECE] 
+ **Qihao Huang**  [MAE] 
 
 ### Team 5 — UC San Diego MAE 148
 
