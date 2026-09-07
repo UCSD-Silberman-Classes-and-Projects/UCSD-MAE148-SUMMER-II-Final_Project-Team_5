@@ -341,7 +341,7 @@ The battery-monitoring system uses separate low and recovery thresholds to preve
 
 ### Healthy Battery Demo
 
-▶️ **[WATCH HEALTHY BATTERY DEMONSTRATION](https://www.youtube.com/watch?v=omp8wu0ba2c)**
+▶️ **[WATCH HEALTHY BATTERY DEMONSTRATION](https://www.youtube.com/watch?v=Rad-cSVCads)**
 
 ---
 
