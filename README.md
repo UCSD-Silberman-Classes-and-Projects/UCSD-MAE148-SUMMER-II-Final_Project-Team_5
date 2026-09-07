@@ -417,7 +417,6 @@ The Team 5 battery-monitor node processes this voltage and publishes:
 ```
 <img width="1061" height="307" alt="0904 Autonomous Condition-Based Pit Stop System" src="https://github.com/user-attachments/assets/b212d77f-4665-4a61-b4fb-3de778e61112" />
 
-```
 ## Battery Parameters
 
 | Parameter | Value |
@@ -447,12 +446,11 @@ Raw Battery Voltage
  v
 battery_monitor_node
  |
- +-------------------+
- |                   |
- v                   v
+ +------------------+
+ |                  |
+ v                  v
 /battery_percentage  /battery_low
 ```
-
 ---
 
 #  Hardware
