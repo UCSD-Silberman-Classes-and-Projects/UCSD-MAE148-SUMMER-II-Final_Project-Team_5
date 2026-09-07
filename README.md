@@ -246,8 +246,6 @@ Demonstration of Camera Vision and Path finding :
 <img width="1280" height="800" alt="lanedetection2" src="https://github.com/user-attachments/assets/7f1d634d-494b-44fe-9974-d0ae02aaef9b" />
 
 
-```
-
 # STOP and Resume Behavior
 
 Before implementing the complete conditional pit-stop state machine, the STOP-sign behavior was validated independently.
@@ -284,10 +282,9 @@ The stop manager acts as the final publisher of vehicle commands and prevents th
 
 ---
 
-#  Conditional Pit-Stop Logic
+# Conditional Pit-Stop Logic
 
 The final project extends the STOP-sign behavior by adding battery condition to the decision.
-
 ```text
 NORMAL_DRIVE
      |
