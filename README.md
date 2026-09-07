@@ -248,7 +248,7 @@ Demonstration of Camera Vision and Path finding :
 
 ```
 
-#  STOP and Resume Behavior
+# STOP and Resume Behavior
 
 Before implementing the complete conditional pit-stop state machine, the STOP-sign behavior was validated independently.
 
@@ -264,9 +264,9 @@ STOP Sign Detected
 Publish Zero Velocity
           |
           v
-STOP
+        STOP
           |
-      Wait 4 Seconds
+     Wait 4 Seconds
           |
           v
 Resume Lane Following
