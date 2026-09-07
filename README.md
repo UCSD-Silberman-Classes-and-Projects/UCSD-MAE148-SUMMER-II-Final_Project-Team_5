@@ -395,7 +395,7 @@ The STOP detector must also remain clear continuously for approximately **one se
 
 ### Low Battery Demo
 
-▶️ **[WATCH LOW BATTERY DEMONSTRATION](PASTE_LOW_BATTERY_VIDEO_LINK_HERE)**
+▶️ **[WATCH LOW BATTERY DEMONSTRATION](https://www.youtube.com/watch?v=Rad-cSVCads)**
 
 ---
 # Battery Monitoring
